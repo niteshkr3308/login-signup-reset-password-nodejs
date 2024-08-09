@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Hide scrollbars */
+    position: relative; /* For absolute positioning of pseudo-elements */
+    background: #e0e0e0; /* Fallback color */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./home.jpg'); /* Update path if necessary */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Place behind the content */
+}
+
+form {
+    background-color:  rgba(69, 66, 66, 0.6); /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure form is above the pseudo-element */
+}
+
+::placeholder {
+    color: black;
+}
+
+input[type="text"], input[type="password"] {
+    width: 94%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+    background: rgb(92, 90, 90);
+    color: #fffdfd;
+    font-weight: bolder;
+}
+
+input[type="submit"] {
+    background: #28a745;
+    color: #fff;
+    cursor: pointer;
+    width: 25%;
+    padding: 10px;
+    margin: 10px auto; /* Center the button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block; /* Ensure it behaves as a block element */
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+    color: #fff9f9;
+    font-weight: bolder;
+}
